@@ -56,7 +56,7 @@ jobs:
       - name: Deploy to Lambda
         run: |
           aws lambda update-function-code \
-            --function-name fastapi-lambda-app \
+            --function-name CICD_Funtion \
             --zip-file fileb://lambda-package.zip \
             --publish
 
