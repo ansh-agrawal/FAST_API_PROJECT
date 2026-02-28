@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
+from mangum import Mangum
 
 app = FastAPI(title="Simple FastAPI App", version="1.0.0")
 
@@ -42,3 +43,5 @@ def create_item(item: ItemCreate) -> dict[str, int | str | float]:
     next_item_id += 1
 
     return new_item
+
+handler = Mangum(app)
