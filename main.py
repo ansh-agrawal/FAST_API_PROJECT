@@ -45,4 +45,4 @@ def create_item(item: ItemCreate) -> dict[str, int | str | float]:
     return new_item
 
 
-handler = Mangum(app)
+handler = Mangum(app, api_gateway_base_path="/dev")
