@@ -44,6 +44,5 @@ def create_item(item: ItemCreate) -> dict[str, int | str | float]:
 
     return new_item
 
+
 handler = Mangum(app)
-
-
